@@ -1,0 +1,9 @@
+project: redis-rs
+target: parser
+duration: 300
+
+cmds:
+  - cmd: /redis-rs/afl/parser/target/debug/fuzz-target
+    env:
+      DISABLE_SMOKETEST: '1'
+    afl: true
